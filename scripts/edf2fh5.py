@@ -602,7 +602,7 @@ def edf2hdf_oldhack(fn, outfn='', hdf_dir='', anonymous=False):
         # gestational age at birth (in seconds)
         # datetime.timedelta(weeks=40).total_seconds()   # default 24192000 seconds or 40 weeks, 280 days
         # could also call this post-conceptional-age PCA
-        patient.attrs['gestatational_age_birth_seconds'] = datetime.timedelta(
+        patient.attrs['gestational_age_birth_seconds'] = datetime.timedelta(
             weeks=40).total_seconds()
         patient.attrs['born_premature'] = 'unknown'  # ('unknown', True, False)
         # hide actual start/end times question: should vary by year or just

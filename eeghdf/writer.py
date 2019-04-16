@@ -120,7 +120,7 @@ class EEGHDFWriter(object):
         # remove this because it is not intrinsic to patient and will change
         # patient.attrs['age_days'] = age_days  # float value for age in days
         ## attributes not in EDF
-        patient.attrs["gestatational_age_at_birth_days"] = gestational_age_at_birth_days
+        patient.attrs["gestational_age_at_birth_days"] = gestational_age_at_birth_days
         # versus giving weeks/days with seconds do not need to worry about calendar issue
         # is 36.5 weeks 36 weeks + 3.5 days? or 36 weeks and 5 days
         # maybe days would be better 280 days is 40 weeks
@@ -501,7 +501,7 @@ def test_EEGHDF_patient_creation():
         (u"gender", "female"),
         (u"birthdate", "2005-11-23"),
         (u"patient_additional", ""),
-        (u"gestatational_age_at_birth_days", 280),
+        (u"gestational_age_at_birth_days", 280),
         (u"born_premature", "false"),
     ]
 
